@@ -55,7 +55,6 @@ def getData(request):
     translator = Translator()
 
     for tweet in tweets:
-        print('for')
         final_text = tweet.text.replace('RT', '')
         if final_text.startswith(' @'):
             position = final_text.index(':')
@@ -76,10 +75,6 @@ def getData(request):
         else:
             neutral += 1
         polarity += analysis.polarity
-    print(polarity)
-    print(f'Amount of positives tweets: {positive}')
-    print(f'Amount of negatives tweets: {negative}')
-    print(f'Amount of neutral tweets: {neutral}')
     response = {
         'status': 1,
         'positive': positive,
