@@ -1,0 +1,8 @@
+# Function dependencies, for example:
+# package>=version
+tweepy
+Flask-API
+Flask
+googletrans==4.0.0-rc1
+unidecode
+TextBlob
